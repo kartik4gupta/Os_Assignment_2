@@ -37,9 +37,9 @@ void *count_A(void *arg)
     
     unsigned long int upperLimit = 4294967295;
     clock_gettime(CLOCK_REALTIME, &st);
-  int counter=1;  
-  while(counter<=upperLimit){
-        counter++;
+  int counterA=1;  
+  while(counterA<=upperLimit){
+        counterA++;
     }
 
     clock_gettime(CLOCK_REALTIME, &fn);
@@ -50,15 +50,16 @@ void *count_A(void *arg)
 
 void *count_B(void *arg)
 {
-    para.sched_priority = 51;
+    para.sched_priority = 25;
     pthread_setschedparam(t2, SCHED_RR, &para);
     int *thr_no = (int *)arg;
     struct timespec st, fn;
     clock_gettime(CLOCK_REALTIME, &st);
     unsigned long int i;
     unsigned long int UpperLt = 4294967295;
-    for (i = 1; i <= UpperLt; i++)
-    {
+    int counterB=1;  
+  while(counterB<=upperLimit){
+        counterB++;
     }
 
     clock_gettime(CLOCK_REALTIME, &fn);
@@ -77,8 +78,9 @@ void *count_C(void *arg)
 
     unsigned long int i;
     unsigned long int UpperLt = 4294967295;
-    for (i = 1; i <= UpperLt; i++)
-    {
+    int counterC=1;  
+  while(counterC<=upperLimit){
+        counterC++;
     }
 
     clock_gettime(CLOCK_REALTIME, &fn);
