@@ -35,10 +35,10 @@ void *count_A(void *arg)
     struct timespec st, fn;
     int *thr_no = (int *)arg;
     
-    unsigned long int upperLimit = 4294967295;
+    unsigned long int upperLt = 4294967295;
     clock_gettime(CLOCK_REALTIME, &st);
   int counterA=1;  
-  while(counterA<=upperLimit){
+  while(counterA<=upperLt){
         counterA++;
     }
 
@@ -56,9 +56,9 @@ void *count_B(void *arg)
     struct timespec st, fn;
     clock_gettime(CLOCK_REALTIME, &st);
     unsigned long int i;
-    unsigned long int UpperLt = 4294967295;
+    unsigned long int upperLt = 4294967295;
     int counterB=1;  
-  while(counterB<=upperLimit){
+  while(counterB<=upperLt){
         counterB++;
     }
 
@@ -77,9 +77,9 @@ void *count_C(void *arg)
     clock_gettime(CLOCK_REALTIME, &st);
 
     unsigned long int i;
-    unsigned long int UpperLt = 4294967295;
+    unsigned long int upperLt = 4294967295;
     int counterC=1;  
-  while(counterC<=upperLimit){
+  while(counterC<=upperLt){
         counterC++;
     }
 
