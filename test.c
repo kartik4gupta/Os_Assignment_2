@@ -3,17 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    float SOURCE[4][4];
-    int i=0;
-    int j=0;
-    float element=0.0;
-    while(i<4){
-        while(j<4){
-            SOURCE[i][j]=element++;
-            j++;
-        }
-        i++;
-    }
+    float SOURCE[4][4]={{1.0,2.0,3.0,4,0},{1.0,2.0,3.0,4.0},{1.0,2.0,3.0,4.0},{1.0,2.0,3.0,4.0}};
     float DESTINATION[4][4];
 
     printf("Initial Matrix: \n");
