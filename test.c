@@ -32,7 +32,7 @@ int main(){
      printf("Final Matrix: \n");
     for(int x=0;x<4;x++){
         for(int y=0;y<4;y++){
-            printf("%f ",SOURCE[x][y]);
+            printf("%f ",DESTINATION[x][y]);
         }
         printf("\n");
     }
