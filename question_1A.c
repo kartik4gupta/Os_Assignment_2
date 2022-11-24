@@ -44,7 +44,7 @@ void *count_A(void *arg)
 
     clock_gettime(CLOCK_REALTIME, &fn);
     sub_time(st, fn, &A);
-    printf("Thread : %d - %ld.%ld\n", *thr_no, A.tv_sec, A.tv_nsec);
+    printf("Thread : %d (OTHER) - %ld.%ld\n", *thr_no, A.tv_sec, A.tv_nsec);
     return NULL;
 }
 
@@ -64,7 +64,7 @@ void *count_B(void *arg)
 
     clock_gettime(CLOCK_REALTIME, &fn);
     sub_time(st, fn, &B);
-    printf("Thread : %d - %ld.%ld\n", *thr_no, B.tv_sec, B.tv_nsec);
+    printf("Thread : %d (RR) - %ld.%ld\n", *thr_no, B.tv_sec, B.tv_nsec);
     return NULL;
 }
 
@@ -85,7 +85,7 @@ void *count_C(void *arg)
 
     clock_gettime(CLOCK_REALTIME, &fn);
     sub_time(st, fn, &C);
-    printf("Thread : %d - %ld.%ld\n", *thr_no, C.tv_sec, C.tv_nsec);
+    printf("Thread : %d (FIFO) - %ld.%ld\n", *thr_no, C.tv_sec, C.tv_nsec);
     return NULL;
 }
 
